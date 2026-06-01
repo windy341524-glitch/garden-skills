@@ -43,10 +43,10 @@ your-project/
 │   ├── SKILL.md                          # 主技能文件
 │   └── references/
 │       ├── advanced-patterns.md          # 代码模板库（slide engine / 设备框架 / 动效时间线 / 数据可视化）
-│       ├── design-directions.md          # 设计方向顾问（6 学派，差异化 3 选 1 推荐）
-│       ├── style-recipes/                # 25 套有 anchor 的风格配方（按需读单文件，每个 anchor 一个 .md）
+│       ├── design-directions.md          # 设计方向顾问（7 学派，差异化 3 选 1 推荐）
+│       ├── style-recipes/                # 29 套有 anchor 的风格配方（按需读单文件，每个 anchor 一个 .md）
 │       │   ├── INDEX.md                   #   目录索引 + 3 张索引表 + 跨配方反模式
-│       │   ├── linear.md / aesop.md / pentagram.md / ...    #   25 个独立 recipe 文件
+│       │   ├── linear.md / aesop.md / pentagram.md / ...    #   29 个独立 recipe 文件
 │       └── critique-guide.md             # 5 维评分细则 + 常见问题清单
 └── ...
 ```
@@ -103,7 +103,7 @@ your-project/
 | 极简专业 | 青蓝 | Outfit + Space Grotesk | 仪表盘、B2B |
 | 手作温度 | 焦糖 | Caveat + Newsreader | 餐饮、教育 |
 
-**风格配方库（25 套有 anchor，渐进式加载）。** 当用户点名"Linear 风" / "Aesop 风" / "Pentagram 级排版"时，Agent 只需读 `references/style-recipes/<anchor>.md` 单个文件（约 50 行）；目录索引、3 张索引表、跨配方反模式都在 `references/style-recipes/INDEX.md`（约 150 行）。整个目录从不一次性加载。25 套配方分布在 7 个学派（Direction Advisor 的 6 学派 + 一个只能通过直接点名 anchor 触达的 *Specialty / Genre* 学派）：
+**风格配方库（29 套有 anchor，渐进式加载）。** 当用户点名"Linear 风" / "Aesop 风" / "Pentagram 级排版"时，Agent 只需读 `references/style-recipes/<anchor>.md` 单个文件（约 50 行）；目录索引、3 张索引表、跨配方反模式都在 `references/style-recipes/INDEX.md`（约 150 行）。整个目录从不一次性加载。29 套配方分布在 8 个学派（Direction Advisor 的 6 学派 + 一个只能通过直接点名 anchor 触达的 *Specialty / Genre* 学派 + 一个用于观点输出和短视频素材的 *Emotional Poster / Viral Content* 学派）：
 
 | 学派 | 配方 |
 |---|---|
@@ -119,7 +119,7 @@ your-project/
 
 ## 风格配方画廊
 
-Skill 自带 **25 套有名字的配方**，每套都对应到真实的品牌、工作室或设计师。目录中的每个配方都在 demo 画廊里有一个完整的整页作品 —— 不是共用模板、不是缩略图情绪板，而是每套配方本来就该长成的那种东西：Aesop 是药剂师产品页、Bloomberg Terminal 是交易工作站、Mid-Century 是 Saul Bass 海报、Y2K 是世纪之交的门户网站。按学派浏览下方卡片，挑一套气质契合你 brief 的配方，或者直接读 `references/style-recipes/<recipe>.md` 的 spec 文件。点击任意预览图打开完整分辨率的 2:1 大图。
+Skill 自带 **29 套有名字的配方**，每套都对应到真实的品牌、工作室或设计师。目录中的每个配方都在 demo 画廊里有一个完整的整页作品 —— 不是共用模板、不是缩略图情绪板，而是每套配方本来就该长成的那种东西：Aesop 是药剂师产品页、Bloomberg Terminal 是交易工作站、Mid-Century 是 Saul Bass 海报、Y2K 是世纪之交的门户网站。按学派浏览下方卡片，挑一套气质契合你 brief 的配方，或者直接读 `references/style-recipes/<recipe>.md` 的 spec 文件。点击任意预览图打开完整分辨率的 2:1 大图。
 
 > 所有截图都是来自 [`demo/web-design-engineer-demo`](../../demo/web-design-engineer-demo/) 这个 React + Vite 画廊的真实渲染 —— 字体、配色、签名手法都和 spec 文件里一致。每个 demo 位于 `src/recipes/<id>.tsx`。
 
@@ -450,8 +450,8 @@ Hash 路由 URL（`#/linear`、`#/aesop`、…）可深链到任意配方。按 
 - **扩展的反俗套清单** —— 从真实 AI 输出中识别出的额外模式
 - **占位符哲学** —— 一套完整的框架，专业地处理缺失素材
 - **配色 × 字体配对表** —— 六套经过验证的视觉系统起点
-- **设计方向顾问** —— 模糊需求场景的 6 学派差异化 3 选 1 推荐机制，且显式接入到 recipe 库做落地
-- **25 套有 anchor 的风格配方库** —— 每套绑定一个真实品牌 / studio / 设计师，含可粘贴的具体值；用来抵御 AI 默认味
+- **设计方向顾问** —— 模糊需求场景的 7 学派差异化 3 选 1 推荐机制，且显式接入到 recipe 库做落地
+- **29 套有 anchor 的风格配方库** —— 每套绑定一个真实品牌 / studio / 设计师，含可粘贴的具体值；用来抵御 AI 默认味
 - **高级模式库** —— 常见 UI 模式的即用代码模板
 
 ---

@@ -49,4 +49,4 @@
 ---
 
 > **Same school — Information Architecture**: [`pentagram`](./pentagram.md) · [`vignelli-swiss-helvetica`](./vignelli-swiss-helvetica.md) · [`bloomberg-terminal`](./bloomberg-terminal.md) · [`nyt-the-daily`](./nyt-the-daily.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

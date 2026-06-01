@@ -50,4 +50,4 @@
 ---
 
 > **Same school — Modern Tool / Builder SaaS**: [`linear`](./linear.md) · [`vercel-mesh`](./vercel-mesh.md) · [`raycast`](./raycast.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

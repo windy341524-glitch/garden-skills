@@ -46,4 +46,4 @@
 ---
 
 > **Same school — Motion / Experimental**: [`field-io`](./field-io.md) · [`active-theory`](./active-theory.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

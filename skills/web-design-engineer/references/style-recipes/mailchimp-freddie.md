@@ -49,4 +49,4 @@
 ---
 
 > **Same school — Warm Humanist**: [`stripe-press`](./stripe-press.md) · [`headspace-meditation`](./headspace-meditation.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

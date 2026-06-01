@@ -49,4 +49,4 @@
 ---
 
 > **Same school — Brutalist / Raw**: [`are-na`](./are-na.md) · [`balenciaga-post-2017`](./balenciaga-post-2017.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

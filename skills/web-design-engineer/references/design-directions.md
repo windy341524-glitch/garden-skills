@@ -1,6 +1,6 @@
 # Design Direction Advisor — Extended Reference
 
-Read this when the request is vague ("make something nice", "I don't know what style I want") and no design context exists. The main `SKILL.md` already covers the **mechanism** (3 differentiated directions, named designer references, hard rule against same-school picks). This file provides the **school taxonomy** — six high-level philosophical lenses, each with named anchors and the sample copy you use to recommend it.
+Read this when the request is vague ("make something nice", "I don't know what style I want") and no design context exists. The main `SKILL.md` already covers the **mechanism** (3 differentiated directions, named designer references, hard rule against same-school picks). This file provides the **school taxonomy** — seven high-level philosophical lenses (six general + one for emotional poster / viral content), each with named anchors and the sample copy you use to recommend it.
 
 > **Terminology lock**: this file deals in **schools** (six high-level lenses) and **anchors** (named studios / brands / designers per school). The companion folder `style-recipes/` contains 25 **recipe** files — one file per anchor — with concrete, ready-to-paste configurations. When a user picks a school here, hand them off to the recipe files in that school for concrete palette / typography / spacing values. Load only the recipe files you actually need; the catalog index is at `style-recipes/INDEX.md`.
 
@@ -17,7 +17,7 @@ Read this when the request is vague ("make something nice", "I don't know what s
 
 ---
 
-## The Six Schools (1 of 3 must come from each different row)
+## The Six Schools (1 of 3 must come from each different row) + Emotional Poster School
 
 ### 1. Information Architecture
 
@@ -141,6 +141,31 @@ Read this when the request is vague ("make something nice", "I don't know what s
 
 **Sample copy when recommending**:
 > "Linear-style modern-tool aesthetic — warm dark ground, hairline 1px borders, a single purple accent used on less than 5% of pixels, monospace shortcut chips. Best when your audience is technical and 'serious but designed' matters more than 'fun and accessible.' This is the recipe that defends most directly against AI-default Inter + blue button + 16px-radius output."
+
+---
+
+### 7. Emotional Poster / Viral Content (情绪海报 / 刷屏内容)
+
+**Vibe**: 暗黑压迫、高冲突、强情绪、每一屏都是一个视觉镜头
+**Best for**: 观点输出、口播稿、短视频视觉素材、社媒传播、争议话题、行业分析
+**Why it works**: 不是把文章变成网页，而是把观点变成一组有攻击性的视觉镜头。适合需要"让人想转发或反驳"的内容。
+
+| Anchor | What to borrow |
+|---|---|
+| **暗黑压迫 (Brutal Poster)** | 近黑底 #050505、acid 绿高亮、超大标题 clamp(48px,16vw,92px)、网格噪点、背景光晕 |
+| **赛博霓虹 (Neon Poster)** | 深蓝黑底 #0a0a1a、霓虹 glow、CRT 扫描线、neon flicker 动效 |
+| **杂志情绪 (Editorial Poster)** | 衬线体大标题、结构化留白、深红 accent、引用竖线、章节编号装饰 |
+| **撕裂拼贴 (Chaos Poster)** | 纯白/纯黑底、纯色反色条、文字倾斜旋转、硬阴影、撕裂边缘 |
+
+**Scale 系统**：这个学校有自己的三维度控制（详见 `emotional-poster-guide.md`）：
+- **Emotion Scale** (1–5): 情绪浓度，从冷静解释到爆发式争议
+- **Conflict Scale** (1–5): 对抗强度，从信息说明到群体/时代冲突
+- **Visual Scale** (1–5): 视觉冲击力，从普通排版到电影预告片感
+
+**Concrete starting points**: [`brutal-poster`](./style-recipes/brutal-poster.md) · [`neon-poster`](./style-recipes/neon-poster.md) · [`editorial-poster`](./style-recipes/editorial-poster.md) · [`chaos-poster`](./style-recipes/chaos-poster.md) — 每个配方文件包含具体的 palette、typography、spacing、signature moves。
+
+**Sample copy when recommending**:
+> "情绪海报模式 — 不是把文章变成网页，而是把观点变成一组有攻击性的视觉镜头。暗黑底、超大标题、acid 绿高亮、网格噪点。默认 Emotion 4 / Conflict 4 / Visual 4。适合口播稿、短视频素材、需要刷屏的社媒内容。"
 
 ---
 

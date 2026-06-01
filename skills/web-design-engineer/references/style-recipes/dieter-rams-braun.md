@@ -47,4 +47,4 @@
 ---
 
 > **Same school — Editorial / Minimalist**: [`apple-hig`](./apple-hig.md) · [`muji-kenya-hara`](./muji-kenya-hara.md) · [`aesop`](./aesop.md) · [`monocle-magazine`](./monocle-magazine.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

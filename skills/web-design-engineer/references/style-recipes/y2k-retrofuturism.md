@@ -51,4 +51,4 @@
 ---
 
 > **Same school — Specialty / Genre**: [`mid-century-modern`](./mid-century-modern.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

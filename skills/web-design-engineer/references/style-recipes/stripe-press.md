@@ -51,4 +51,4 @@
 ---
 
 > **Same school — Warm Humanist**: [`mailchimp-freddie`](./mailchimp-freddie.md) · [`headspace-meditation`](./headspace-meditation.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

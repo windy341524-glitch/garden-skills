@@ -49,4 +49,4 @@
 ---
 
 > **Same school — Specialty / Genre**: [`y2k-retrofuturism`](./y2k-retrofuturism.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

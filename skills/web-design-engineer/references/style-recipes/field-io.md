@@ -41,10 +41,10 @@
 
 **Don't use when**
 - The deliverable will live as a static screenshot (the recipe loses ~70% of its impact)
-- Build budget is small (this is the most labor-intensive of the 25)
+- Build budget is small (this is the most labor-intensive of the 29)
 - The target audience uses low-end hardware or care about performance / accessibility above wow
 
 ---
 
 > **Same school — Motion / Experimental**: [`active-theory`](./active-theory.md) · [`resn-storytelling`](./resn-storytelling.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

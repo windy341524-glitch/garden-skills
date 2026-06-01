@@ -53,4 +53,4 @@
 ---
 
 > **Same school — Modern Tool / Builder SaaS**: [`linear`](./linear.md) · [`raycast`](./raycast.md) · [`notion-pre-ai`](./notion-pre-ai.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

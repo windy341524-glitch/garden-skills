@@ -1,6 +1,6 @@
 # Style Recipes — Catalog Index
 
-A catalog of 25 named, anchored design recipes — each one tied to a real brand / studio / designer and **stored as its own file in this directory**. Read this INDEX to discover what's available and how to choose; then read **one recipe file** to get the concrete values for Step 3.
+A catalog of 29 named, anchored design recipes — each one tied to a real brand / studio / designer **and** stored as its own file in this directory. Read this INDEX to discover what's available and how to choose; then read **one recipe file** to get the concrete values for Step 3.
 
 ```
 references/style-recipes/
@@ -8,7 +8,7 @@ references/style-recipes/
 ├── apple-hig.md
 ├── muji-kenya-hara.md
 ├── aesop.md
-├── ... (25 recipe files total)
+├── ... (29 recipe files total)
 ```
 
 This catalog is the **anchored library**; `../design-directions.md` is the **school taxonomy** for vague-request conversations. The two work together:
@@ -29,7 +29,7 @@ This catalog is the **anchored library**; `../design-directions.md` is the **sch
 2. **The Direction Advisor narrowed to a school** — read this INDEX to see which recipes live in that school, then read 2–3 specific files to present the user concrete choices.
 3. **You're in Step 3 and need a known-good palette / typography / spacing combo** — pick the closest recipe by school or best-for table below, then read that single file and adapt.
 
-Do **not** load every recipe file up front. The entire catalog is ~1400 lines if loaded together; loading one recipe is ~50 lines. **Loading the whole catalog when you only need one recipe is the exact anti-pattern this split is designed to prevent.**
+Do **not** load every recipe file up front. The entire catalog is ~1800 lines if loaded together; loading one recipe is ~50 lines. **Loading the whole catalog when you only need one recipe is the exact anti-pattern this split is designed to prevent.**
 
 Do **not** read recipe files when:
 - The user provided their own brand assets / Figma / codebase — extract from those instead (Asset > Spec).
@@ -69,8 +69,9 @@ Do **not** read recipe files when:
 | **Brutalist / Raw** | [`are-na`](./are-na.md) · [`bloomberg-businessweek-turley`](./bloomberg-businessweek-turley.md) · [`balenciaga-post-2017`](./balenciaga-post-2017.md) |
 | **Warm Humanist** | [`mailchimp-freddie`](./mailchimp-freddie.md) · [`stripe-press`](./stripe-press.md) · [`headspace-meditation`](./headspace-meditation.md) |
 | **Specialty / Genre** (not surfaced via Advisor) | [`y2k-retrofuturism`](./y2k-retrofuturism.md) · [`mid-century-modern`](./mid-century-modern.md) |
+| **Emotional Poster / Viral Content** (surfaced via Advisor for opinion / viral / short-video tasks) | [`brutal-poster`](./brutal-poster.md) · [`neon-poster`](./neon-poster.md) · [`editorial-poster`](./editorial-poster.md) · [`chaos-poster`](./chaos-poster.md) |
 
-The first 6 schools mirror the Direction Advisor's 6 schools (in `../design-directions.md`) — so when the Advisor picks one of those, you know which recipe files to surface. The 7th school (Specialty / Genre) is **only reachable through direct anchor naming** — users wanting Y2K or Mid-Century always arrive with the anchor in hand, never through Advisor.
+The first 6 schools mirror the Direction Advisor's 6 schools (in `../design-directions.md`) — so when the Advisor picks one of those, you know which recipe files to surface. The 7th school (Specialty / Genre) is **only reachable through direct anchor naming** — users wanting Y2K or Mid-Century always arrive with the anchor in hand, never through Advisor. The 8th school (Emotional Poster) is **surfaced when the task involves opinion output, viral content, short-video presentation, or when the user requests "emotional poster" / "conflict style" / "visual impact"** — it has its own Emotion/Conflict/Visual scale system (see `../emotional-poster-guide.md`).
 
 ## Index 2 — By Best-For
 
@@ -84,18 +85,21 @@ The first 6 schools mirror the Direction Advisor's 6 schools (in `../design-dire
 | Differentiated / counter-culture / artist | [`are-na`](./are-na.md) · [`bloomberg-businessweek-turley`](./bloomberg-businessweek-turley.md) · [`balenciaga-post-2017`](./balenciaga-post-2017.md) |
 | Approachable B2C / community / health | [`mailchimp-freddie`](./mailchimp-freddie.md) · [`headspace-meditation`](./headspace-meditation.md) · [`notion-pre-ai`](./notion-pre-ai.md) |
 | Retro / theme / decade-coded | [`y2k-retrofuturism`](./y2k-retrofuturism.md) · [`mid-century-modern`](./mid-century-modern.md) |
+| 观点输出 / 争议话题 / 短视频口播素材 | [`brutal-poster`](./brutal-poster.md) · [`chaos-poster`](./chaos-poster.md) |
+| AI/科技话题 / 赛博美学 / 未来感 | [`neon-poster`](./neon-poster.md) |
+| 深度观点 / 行业分析 / 高级感内容 | [`editorial-poster`](./editorial-poster.md) |
 
 ## Index 3 — By Mode (light / dark / either)
 
 | Mode | Recipes |
 |---|---|
 | Light-first | [`apple-hig`](./apple-hig.md) · [`muji-kenya-hara`](./muji-kenya-hara.md) · [`aesop`](./aesop.md) · [`dieter-rams-braun`](./dieter-rams-braun.md) · [`monocle-magazine`](./monocle-magazine.md) · [`pentagram`](./pentagram.md) · [`nyt-the-daily`](./nyt-the-daily.md) · [`stripe-press`](./stripe-press.md) · [`headspace-meditation`](./headspace-meditation.md) · [`mailchimp-freddie`](./mailchimp-freddie.md) · [`mid-century-modern`](./mid-century-modern.md) |
-| Dark-first | [`linear`](./linear.md) · [`vercel-mesh`](./vercel-mesh.md) · [`raycast`](./raycast.md) · [`bloomberg-terminal`](./bloomberg-terminal.md) · [`field-io`](./field-io.md) · [`active-theory`](./active-theory.md) · [`resn-storytelling`](./resn-storytelling.md) · [`y2k-retrofuturism`](./y2k-retrofuturism.md) |
-| Works either way | [`vignelli-swiss-helvetica`](./vignelli-swiss-helvetica.md) · [`tufte-dataink`](./tufte-dataink.md) · [`notion-pre-ai`](./notion-pre-ai.md) · [`are-na`](./are-na.md) · [`bloomberg-businessweek-turley`](./bloomberg-businessweek-turley.md) · [`balenciaga-post-2017`](./balenciaga-post-2017.md) |
+| Dark-first | [`linear`](./linear.md) · [`vercel-mesh`](./vercel-mesh.md) · [`raycast`](./raycast.md) · [`bloomberg-terminal`](./bloomberg-terminal.md) · [`field-io`](./field-io.md) · [`active-theory`](./active-theory.md) · [`resn-storytelling`](./resn-storytelling.md) · [`y2k-retrofuturism`](./y2k-retrofuturism.md) · [`brutal-poster`](./brutal-poster.md) · [`neon-poster`](./neon-poster.md) |
+| Works either way | [`vignelli-swiss-helvetica`](./vignelli-swiss-helvetica.md) · [`tufte-dataink`](./tufte-dataink.md) · [`notion-pre-ai`](./notion-pre-ai.md) · [`are-na`](./are-na.md) · [`bloomberg-businessweek-turley`](./bloomberg-businessweek-turley.md) · [`balenciaga-post-2017`](./balenciaga-post-2017.md) · [`editorial-poster`](./editorial-poster.md) · [`chaos-poster`](./chaos-poster.md) |
 
 ---
 
-## Cross-Cutting Anti-Patterns (apply to all 25 recipes)
+## Cross-Cutting Anti-Patterns (apply to all 29 recipes)
 
 These apply across every recipe in this catalog. Violating them collapses the recipe back into AI-default slop. **Read these even before reading an individual recipe file** — they're not duplicated in each file.
 
@@ -125,15 +129,15 @@ Recipes like Aesop, Stripe Press, MUJI, Apple HIG, Mailchimp, and Headspace rely
 
 ### ❌ Don't invent new recipes silently
 
-If you find yourself drifting outside the listed recipes, **tell the user**: "None of the 25 recipes fits — here's what I propose instead." A new recipe deserves its own anchor, its own concrete values, and its own signature moves articulated. Drifting silently produces the AI-default that this whole catalog is built to prevent.
+If you find yourself drifting outside the listed recipes, **tell the user**: "None of the 29 recipes fits — here's what I propose instead." A new recipe deserves its own anchor, its own concrete values, and its own signature moves articulated. Drifting silently produces the AI-default that this whole catalog is built to prevent.
 
 ### ❌ Don't read the whole catalog when you need one recipe
 
-Load only the recipe files you actually need. If the user said "Linear-style", read [`linear.md`](./linear.md) — not all 25. The 1-file-at-a-time pattern is what makes this catalog efficient; loading everything up front defeats progressive disclosure.
+Load only the recipe files you actually need. If the user said "Linear-style", read [`linear.md`](./linear.md) — not all 29. The 1-file-at-a-time pattern is what makes this catalog efficient; loading everything up front defeats progressive disclosure.
 
 ---
 
-## When None of the 25 Fits
+## When None of the 29 Fits
 
 Options in this order:
 

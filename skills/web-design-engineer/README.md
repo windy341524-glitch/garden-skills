@@ -43,10 +43,10 @@ your-project/
 │   ├── SKILL.md                          # Main skill file
 │   └── references/
 │       ├── advanced-patterns.md          # Code template library (slide engine, device frames, motion timelines, data viz)
-│       ├── design-directions.md          # Design Direction Advisor (6 schools, differentiated 3-pick recommendation)
-│       ├── style-recipes/                # 25 anchored style recipes — one .md file per anchor, loaded on demand
+│       ├── design-directions.md          # Design Direction Advisor (7 schools, differentiated 3-pick recommendation)
+│       ├── style-recipes/                # 29 anchored style recipes — one .md file per anchor, loaded on demand
 │       │   ├── INDEX.md                   #   Catalog index + 3 cross-indexes + cross-cutting anti-patterns
-│       │   ├── linear.md / aesop.md / pentagram.md / ...    #   25 single-recipe files
+│       │   ├── linear.md / aesop.md / pentagram.md / ...    #   29 single-recipe files
 │       └── critique-guide.md             # 5-dimension scoring rubric + common issues catalog
 └── ...
 ```
@@ -103,7 +103,7 @@ The agent will automatically pick up the skill when your request involves visual
 | Minimal professional | Teal-blue | Outfit + Space Grotesk | Dashboards, B2B |
 | Artisan warmth | Caramel | Caveat + Newsreader | Food, education |
 
-**Anchored style-recipe library (25 named recipes, progressively loaded).** When the user names an anchor ("Linear-style", "Aesop feeling", "Pentagram-grade type"), the agent reads **only the matching file** at `references/style-recipes/<anchor>.md` (~50 lines). The catalog index, 3 cross-indexes, and cross-cutting anti-patterns live in `references/style-recipes/INDEX.md` (~150 lines). The full catalog is never loaded at once. The 25 recipes are spread across 7 schools (the 6 Direction-Advisor schools plus a *Specialty / Genre* school reachable only via direct anchor names):
+**Anchored style-recipe library (29 named recipes, progressively loaded).** When the user names an anchor ("Linear-style", "Aesop feeling", "Pentagram-grade type"), the agent reads **only the matching file** at `references/style-recipes/<anchor>.md` (~50 lines). The catalog index, 3 cross-indexes, and cross-cutting anti-patterns live in `references/style-recipes/INDEX.md` (~150 lines). The full catalog is never loaded at once. The 29 recipes are spread across 8 schools (the 6 Direction-Advisor schools plus a *Specialty / Genre* school reachable only via direct anchor names, and an *Emotional Poster / Viral Content* school for opinion output and short-video materials):
 
 | School | Recipes |
 |---|---|
@@ -119,7 +119,7 @@ The agent will automatically pick up the skill when your request involves visual
 
 ## Style Recipe Gallery
 
-The skill ships **25 named recipes**, each tied to a real brand, studio, or designer. Every recipe has a working, full-page artefact in the demo gallery — not a shared template, not a thumbnail mood-board, but the form each recipe was actually designed for: an apothecary product page for Aesop, a trading workstation for Bloomberg Terminal, a Saul-Bass poster for Mid-Century, a Y2K portal for Retrofuturism. Browse by school below, pick the one whose vibe matches your brief, or read the spec file at `references/style-recipes/<recipe>.md`. Click any preview to open the full-resolution 2:1 frame.
+The skill ships **29 named recipes**, each tied to a real brand, studio, or designer. Every recipe has a working, full-page artefact in the demo gallery — not a shared template, not a thumbnail mood-board, but the form each recipe was actually designed for: an apothecary product page for Aesop, a trading workstation for Bloomberg Terminal, a Saul-Bass poster for Mid-Century, a Y2K portal for Retrofuturism. Browse by school below, pick the one whose vibe matches your brief, or read the spec file at `references/style-recipes/<recipe>.md`. Click any preview to open the full-resolution 2:1 frame.
 
 > Frames are real artefacts rendered by the live React + Vite gallery at [`demo/web-design-engineer-demo`](../../demo/web-design-engineer-demo/) — same fonts, same palettes, same signature moves as the recipe spec. Each demo is in `src/recipes/<id>.tsx`.
 
@@ -450,8 +450,8 @@ Key additions beyond the original Claude Design prompt:
 - **Extended anti-cliché list** — additional patterns identified from real-world AI output
 - **Placeholder philosophy** — a complete framework for handling missing assets professionally
 - **Color × font pairing table** — six validated visual system starting points
-- **Design Direction Advisor** — six-school conversational tool for vague requests, with explicit handoff to the recipe library
-- **25-recipe anchored style library** — each recipe tied to a real brand / studio / designer with concrete copy-able values; defends against AI-default mush
+- **Design Direction Advisor** — seven-school conversational tool for vague requests, with explicit handoff to the recipe library
+- **29-recipe anchored style library** — each recipe tied to a real brand / studio / designer with concrete copy-able values; defends against AI-default mush
 - **Advanced pattern library** — ready-to-use code templates for common UI patterns
 
 ---

@@ -51,4 +51,4 @@
 ---
 
 > **Same school — Modern Tool / Builder SaaS**: [`linear`](./linear.md) · [`vercel-mesh`](./vercel-mesh.md) · [`notion-pre-ai`](./notion-pre-ai.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

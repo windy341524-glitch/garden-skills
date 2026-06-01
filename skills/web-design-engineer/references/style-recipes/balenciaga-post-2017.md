@@ -49,4 +49,4 @@
 ---
 
 > **Same school — Brutalist / Raw**: [`are-na`](./are-na.md) · [`bloomberg-businessweek-turley`](./bloomberg-businessweek-turley.md)  
-> **Browse all 25 recipes**: [INDEX.md](./INDEX.md)
+> **Browse all 29 recipes**: [INDEX.md](./INDEX.md)

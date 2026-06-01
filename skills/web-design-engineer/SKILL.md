@@ -51,6 +51,8 @@ Whether and how much to ask depends on how much information has been provided. *
 | "Design onboarding for my food-delivery app" | ✅ Ask heavily: users, flows, brand, variants |
 | "Recreate the composer UI from this codebase" | ❌ Read the code directly — no questions needed |
 | "Make me something nice / I don't know what style I want" | ⚡ Switch to **Design Direction Advisor** (see below) |
+| "把这篇文章做成口播稿 / 情绪海报 / 短视频素材" | ⚡ Switch to **Emotional Poster Mode** (see below) |
+| "帮我做一个有冲突感 / 视觉冲击 / 刷屏感的页面" | ⚡ Switch to **Emotional Poster Mode** (see below) |
 
 Key areas to probe (pick as needed — no fixed count required):
 - **Product context**: What product? Target users? Existing design system / brand guidelines / codebase?
@@ -239,7 +241,111 @@ The chosen direction becomes the design context for Step 2 onward. Document it i
 
 > **Direction → concrete starting point**: once the user picks a school, surface 2–3 named recipes from that school by reading the matching files in `references/style-recipes/` (e.g., picked *Information Architecture* → read `references/style-recipes/pentagram.md`, `references/style-recipes/bloomberg-terminal.md`, etc.). Each recipe file brings concrete palette, typography, spacing, and signature moves you can paste into the Step 3 design-system declaration.
 
-> Extended philosophy library, per-school anchor tables, and AI-prompt templates → `references/design-directions.md`. Anchored recipe catalog → `references/style-recipes/INDEX.md` (catalog index + 3 indexes + cross-cutting anti-patterns) + 25 single-recipe files alongside it.
+> Extended philosophy library, per-school anchor tables, and AI-prompt templates → `references/design-directions.md`. Anchored recipe catalog → `references/style-recipes/INDEX.md` (catalog index + 3 indexes + cross-cutting anti-patterns) + 29 single-recipe files alongside it.
+
+---
+
+## Emotional Poster Mode (情绪海报模式)
+
+**When to trigger**:
+- 任务涉及观点输出、口播稿、短视频视觉素材、社媒传播内容
+- 用户说"情绪海报"、"冲突风格"、"视觉冲击"、"刷屏感"
+- 输入是一篇文章，输出需要是"有攻击性的视觉镜头"而不是普通网页
+- 用户要求"文章→口播稿→HTML"链路
+
+**When to skip**:
+- 用户要的是产品页面、仪表盘、原型、幻灯片 → 用主流程
+- 用户没有提到情绪、冲突、视觉冲击等关键词 → 用主流程或 Design Direction Advisor
+
+### Mechanism: 三 Scale 定义 → 选配方 → Scene 架构
+
+**Step 1: 确定三个 Scale**（向用户确认或根据内容自动判断）
+
+| Scale | 范围 | 问什么 |
+|---|---|---|
+| **Emotion** (情绪强度) | 1–5 | "你希望这个内容的情绪浓度多高？1=冷静解释，5=爆发式争议" |
+| **Conflict** (对抗强度) | 1–5 | "你希望观点的冲突感多强？1=信息说明，5=群体/时代冲突" |
+| **Visual** (视觉冲击力) | 1–5 | "你希望视觉多炸？1=普通排版，5=电影预告片感" |
+
+默认值（用户没说时）: Emotion 4, Conflict 4, Visual 4
+
+**Step 2: 根据 Visual Scale 选配方**
+
+| Visual Scale | 推荐配方 |
+|---|---|
+| 1–2 | 不需要 Emotional Poster 模式，用常规配方 |
+| 3 | `references/style-recipes/editorial-poster.md` |
+| 4 | `references/style-recipes/brutal-poster.md` 或 `neon-poster.md` |
+| 5 | `references/style-recipes/brutal-poster.md` 或 `chaos-poster.md` |
+
+读取配方文件获取具体的 palette、typography、spacing、signature moves。
+
+**Step 3: 确定内容结构（Scene 架构）**
+
+每个输出由多个 scene 组成，每个 scene 是一个独立视觉镜头：
+
+```
+Scene 1: 钩子 (Hook)        — 一句话，最大字号，情绪最浓
+Scene 2: 旧认知 (Old Belief) — 你以为的真相
+Scene 3: 新现实 (New Reality) — 真正的真相，hit 高亮反转
+Scene 4: 冲突高潮 (Conflict)  — 正反对撞，最大视觉冲击
+Scene 5: 结论 (Conclusion)   — 你的观点，简洁有力
+Scene 6: 记忆点 (Memory Hook) — 结尾留一个让人忘不掉的东西
+```
+
+**Scene CSS 强制规范**：
+```css
+.scene {
+  min-height: 100vh;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+```
+
+**Step 4: 文案生成规则**
+
+根据 Emotion Scale 控制文案风格：
+
+| Emotion | 文案风格 |
+|---|---|
+| 1–2 | 正常叙述，可以是长句 |
+| 3 | 短句为主，有态度词 |
+| 4 | 极短句，反问句，对比句 |
+| 5 | 爆发式短句，感叹号，省略号，压迫性排版 |
+
+根据 Conflict Scale 控制内容结构：
+
+| Conflict | 内容结构 |
+|---|---|
+| 1–2 | 线性叙事 |
+| 3 | 开头反常识 → 中段解释 → 结尾反转 |
+| 4 | 正面观点 → 反面证据 → 新认知 |
+| 5 | 旧世界 → 冲突爆发 → 新秩序 → 悬念 |
+
+**Step 5: 输出要求**
+
+- 输出完整 HTML 文件，CSS 写在 `<style>` 标签中
+- **不依赖外部图片** — 用 CSS 渐变、噪点、几何图形、伪元素、遮罩、背景光、边框
+- 移动端优先：390px–430px 视口
+- 每个 scene 是一个完整屏幕 (min-height: 100vh)
+- 页面适合截图、录屏、转成视频素材
+- 不输出解释，只输出 HTML
+
+**Step 6: 审美审稿**
+
+生成后，用以下标准自检：
+- [ ] 第一屏是否能在 0.5 秒内吸住注意力？
+- [ ] 每个 scene 是否有明确的情绪（愤怒/震惊/讽刺/反转/压迫/释放）？
+- [ ] 关键词是否用了 hit 高亮？
+- [ ] 是否有平铺直叙的段落？（如果有 → 重写为短句+冲突结构）
+- [ ] 视觉上是否像普通网页？（如果是 → 加强对比、字号比、留白张力）
+- [ ] 移动端是否可读？字号是否 ≥ 16px？
+
+详细指南 → `references/emotional-poster-guide.md`
 
 ---
 
@@ -400,6 +506,18 @@ Choose animation approach by complexity, from simplest to heaviest — don't rea
 - **Pure visual comparison** (button colors, typography, card styles) → use a design canvas to display options side by side
 - **Interactions, flows, multi-option scenarios** → build a full clickable prototype + expose options as Tweaks
 
+### Emotional Posters / 口播视觉素材
+
+专为"文章→情绪海报→短视频素材"链路设计。
+
+- **纯 HTML + CSS** — 不用 React，不用 JavaScript（允许 CSS @keyframes 微动效）
+- **移动端优先** — 默认 390px–430px 视口，所有字号使用 `clamp()` 流式缩放
+- **Scene 架构** — 每个 section 是一个 scene，min-height: 100vh，flex column 居中
+- **不依赖外部资源** — 用 CSS 渐变、噪点、几何伪元素、背景光晕代替图片
+- **输出单文件** — 一个 `.html` 文件包含所有内容
+- **适合截图和录屏** — 每个 scene 都是一个完整的视觉镜头
+- 详细 Scene 架构和 Scale 系统 → `references/emotional-poster-guide.md`
+
 ---
 
 ## Variant Exploration Philosophy
@@ -491,3 +609,4 @@ Read on demand based on task type — don't preload everything:
 | User named an anchor ("Linear-style" / "Aesop feeling") → load **only that one file** | `references/style-recipes/<anchor>.md` (e.g., `linear.md`, `aesop.md`) |
 | Browse the recipe catalog / compare options after Direction Advisor picks a school | `references/style-recipes/INDEX.md` (3 indexes + cross-cutting anti-patterns; then read 1–3 specific recipe files) |
 | Critique mode — detailed scoring rubrics, per-output-type weighting, common-issue catalog (top 10) | `references/critique-guide.md` |
+| 观点输出 / 口播稿 / 情绪海报 / 短视频素材 → Emotional Poster Mode | `references/emotional-poster-guide.md` + 选中的 poster recipe (`brutal-poster.md` / `neon-poster.md` / `editorial-poster.md` / `chaos-poster.md`) |
