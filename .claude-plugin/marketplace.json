@@ -4,8 +4,8 @@
     "name": "ConardLi"
   },
   "metadata": {
-    "description": "A curated collection of agent skills covering web video presentations, visual web design, local knowledge-base retrieval, and GPT Image 2 image generation.",
-    "version": "0.3.0"
+    "description": "A curated collection of agent skills covering web video presentations, visual web design, local knowledge-base retrieval, GPT Image 2 image generation, and emotional video production with Voicebox MCP integration.",
+    "version": "0.4.0"
   },
   "plugins": [
     {
@@ -42,6 +42,15 @@
       "strict": false,
       "skills": [
         "./skills/gpt-image-2"
+      ]
+    },
+    {
+      "name": "emotional-video-skills",
+      "description": "7-stage pipeline for transforming articles into emotionally charged visual video materials with Voicebox MCP voice synthesis integration.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/emotional-video-v2"
       ]
     }
   ]

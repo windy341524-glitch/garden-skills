@@ -1,0 +1,29 @@
+{
+  "name": "emotional-video-v2",
+  "version": "2.0.0",
+  "description": "Transform articles into emotionally charged visual video materials with Voicebox MCP integration",
+  "compatibility": {
+    "claude-code": ">=1.0.0",
+    "min-context-window": "100k"
+  },
+  "references": [
+    "SCALES-CONFIG.md",
+    "CONTENT-DIRECTOR.md",
+    "EMOTIONAL-SCRIPTWRITER.md",
+    "VOICEBOX-DIRECTOR.md",
+    "VISUAL-DIRECTOR.md",
+    "HTML-ART-DIRECTOR.md",
+    "AESTHETIC-CRITIC.md",
+    "MCP-CALL-PLANNER.md"
+  ],
+  "mcpDependencies": [
+    "voicebox"
+  ],
+  "sharedReferences": [
+    "../web-design-engineer/references/style-recipes/brutal-poster.md",
+    "../web-design-engineer/references/style-recipes/neon-poster.md",
+    "../web-design-engineer/references/style-recipes/editorial-poster.md",
+    "../web-design-engineer/references/style-recipes/chaos-poster.md",
+    "../web-design-engineer/references/emotional-poster-guide.md"
+  ]
+}
