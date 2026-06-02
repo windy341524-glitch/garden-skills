@@ -25,10 +25,16 @@
 <br/><a href="#gpt-image-2"><strong>gpt-image-2</strong></a>
 <br/><sub>图像生成 / Prompt</sub>
 </td>
+<tr>
 <td width="50%" valign="top">
 <a href="#kb-retriever"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/kb-retriever-skill.webp" alt="KB Retriever Skill" width="100%"></a>
 <br/><a href="#kb-retriever"><strong>kb-retriever</strong></a>
 <br/><sub>本地知识库检索</sub>
+</td>
+<td width="50%" valign="top">
+<a href="#emotional-video-presentation"><img src="https://cdn.jsdelivr.net/gh/ConardLi/assets@main/imgs/web-video-presentation-skill.webp" alt="Emotional Video Presentation Skill" width="100%"></a>
+<br/><a href="#emotional-video-presentation"><strong>emotional-video-presentation</strong></a>
+<br/><sub>情绪视频 / Voicebox MCP</sub>
 </td>
 </tr>
 </table>
@@ -36,7 +42,7 @@
 [![License: MIT](https://img.shields.io/github/license/ConardLi/garden-skills?style=flat-square&color=blue)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ConardLi/garden-skills?style=flat-square)](https://github.com/ConardLi/garden-skills/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#贡献)
-[![Skills count](https://img.shields.io/badge/skills-4-orange?style=flat-square)](#skills-gallery)
+[![Skills count](https://img.shields.io/badge/skills-5-orange?style=flat-square)](#skills-gallery)
 [![Spec](https://img.shields.io/badge/spec-SKILL.md-black?style=flat-square)](https://agentskills.io)
 
 [English](./README.md) · [中文文档](./README.zh-CN.md) · [日本語](./README.ja-JP.md)
@@ -249,6 +255,27 @@
 
 ---
 
+### [`emotional-video-presentation`](./skills/emotional-video-presentation) *(new)*
+
+**分类：** 情绪视频制作 / Voicebox MCP 集成
+**适合：** 把文章变成强情绪口播视频素材，带结构化配音计划。
+
+7 阶段 pipeline：文章 → 内容导演提炼冲突 → 强情绪口播稿 → Voicebox MCP 配音分段 → 视觉分镜 → 高审美 HTML → 审美批评 → MCP 调用计划。
+
+**默认参数：** emotionScale=5, conflictScale=4, visualScale=5, narrativeMode=brutal
+
+**Voicebox MCP 集成：**
+- Stage 3 拆分口播稿为结构化片段（sceneId / emotion / pace / energy / pause）
+- Stage 7 生成 `voicebox.speak()` 调用计划
+- 不直接调用 MCP，只生成计划；MCP 不可用时保存 fallback JSON
+- sceneId 在 voiceboxSegments / visualStoryboard / HTML `data-scene-id` 三者间 1:1 对齐
+
+**5 种视觉模式：** brutal（黑红压迫）/ cinematic（电影预告片）/ editorial（杂志封面）/ chaos（撕裂拼贴）/ neon（赛博霓虹）
+
+链接：[SKILL.md](./skills/emotional-video-presentation/SKILL.md) · [README](./skills/emotional-video-presentation/README.zh-CN.md)
+
+---
+
 ## 安装
 
 总共支持 5 种安装方式，按你的工作流选一个即可：
@@ -330,6 +357,7 @@ npx skills remove kb-retriever  # 卸载
 | `web-design-skills` | `web-design-engineer` |
 | `knowledge-base-skills` | `kb-retriever` |
 | `image-generation-skills` | `gpt-image-2` |
+| `emotional-video-skills` | `emotional-video-presentation` |
 
 ### 方式 C · Releases 钉版本 `.zip`
 

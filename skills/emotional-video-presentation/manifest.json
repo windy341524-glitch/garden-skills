@@ -1,0 +1,18 @@
+{
+  "name": "emotional-video-presentation",
+  "version": "2.0.0",
+  "category": "Emotional Video / Voicebox MCP",
+  "description": "Transform articles into emotionally charged short-video materials through a 7-stage pipeline: content analysis → emotional voiceover → Voicebox MCP voice plan → visual storyboard → high-aesthetic HTML → aesthetic critique → MCP call plan.",
+  "homepage": "https://github.com/ConardLi/garden-skills/tree/main/skills/emotional-video-presentation",
+  "compat": [
+    "claude-code",
+    "claude-ai",
+    "cursor",
+    "codex-cli",
+    "gemini-cli",
+    "opencode"
+  ],
+  "mcpDependencies": [
+    "voicebox"
+  ]
+}

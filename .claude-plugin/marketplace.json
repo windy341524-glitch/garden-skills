@@ -50,7 +50,7 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/emotional-video-v2"
+        "./skills/emotional-video-presentation"
       ]
     }
   ]
