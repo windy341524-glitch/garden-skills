@@ -249,6 +249,70 @@ Links: [README](./skills/kb-retriever/README.md) · [SKILL.md](./skills/kb-retri
 
 ---
 
+### [`emotional-video-v2`](./skills/emotional-video-v2) *(new)*
+
+**Category:** Emotional Video Production / Voicebox MCP Integration  
+**Best for:** turning articles into emotionally charged visual video materials with structured voice synthesis plans.
+
+`emotional-video-v2` is a 7-stage pipeline: article → content analysis → emotional voiceover script → Voicebox MCP voice plan → visual storyboard → high-aesthetic HTML → aesthetic critique.
+
+**v2 Pipeline:**
+
+```
+文章 → content-director-v2 → emotional-scriptwriter-v2 → voicebox-director-v2
+     → visual-director-v2 → html-art-director-v2 → aesthetic-critic-v2 → mcp-call-planner-v2
+```
+
+**Scale system (import from `src/config/scales.ts`):**
+
+| Scale | Range | Default | Controls |
+|---|---|---|---|
+| `emotionScale` | 1–5 | 5 | Voiceover emotional intensity (calm → explosive) |
+| `conflictScale` | 1–5 | 4 | Content conflict structure (info → era-level clash) |
+| `visualScale` | 1–5 | 5 | Visual impact (plain layout → cinematic poster) |
+| `narrativeMode` | enum | `brutal` | Visual style: `brutal` / `cinematic` / `editorial` / `chaos` / `neon` |
+
+**Voicebox MCP integration:**
+
+- Stage 3 splits voiceover script into structured segments (`sceneId`, `emotion`, `pace`, `energy`, `pause`, `emphasis`)
+- Stage 7 generates `voicebox.speak()` call plan per segment
+- Fallback: saves `voicebox-segments.json` when MCP is unavailable
+- `sceneId` is shared across voiceboxSegments, visualStoryboard, and HTML `data-scene-id`
+
+**How to run:**
+
+```ts
+import { generateEmotionalPage, DEFAULT_SCALES } from "./src";
+
+const result = await generateEmotionalPage(executor, {
+  article: "your article content...",
+  ...DEFAULT_SCALES,
+});
+
+// result.html           — complete HTML file
+// result.mcpPlan        — Voicebox MCP call plan
+// result.critic         — aesthetic critique (score 1-10, pass/fail)
+// result.voiceboxSegments — structured voice segments
+```
+
+**Fallback to legacy:** If you need interactive Vite+React+TS presentations → use `web-video-presentation` instead. v2 is for quick "screenshot/record-ready" visual materials.
+
+**8 independent skills (each callable standalone):**
+
+| Skill | File | Purpose |
+|---|---|---|
+| content-director-v2 | `skills/content-director-v2.md` | Extract conflict structure from articles |
+| emotional-scriptwriter-v2 | `skills/emotional-scriptwriter-v2.md` | Write emotional voiceover scripts with beats |
+| voicebox-director-v2 | `skills/voicebox-director-v2.md` | Split scripts into Voicebox MCP segments |
+| visual-director-v2 | `skills/visual-director-v2.md` | Create visual storyboard per segment |
+| html-art-director-v2 | `skills/html-art-director-v2.md` | Generate high-aesthetic HTML |
+| aesthetic-critic-v2 | `skills/aesthetic-critic-v2.md` | 6-dimension aesthetic audit |
+| mcp-call-planner-v2 | `skills/mcp-call-planner-v2.md` | Generate Voicebox MCP call plan |
+
+Links: [SKILL.md](./skills/emotional-video-v2/SKILL.md) · [Scale Config](./src/config/scales.ts) · [Pipeline](./src/pipeline/generate-emotional-page.ts)
+
+---
+
 ## Install
 
 There are five supported install paths. Pick the one that fits your stack:
